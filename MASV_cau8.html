@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Câu hỏi 8 - JavaScript</title>
+<style>
+  body { font-family: Arial, sans-serif; margin: 0; background: #f5f7fa; color: #222; line-height: 1.6; }
+  header { background: #1f3a5f; color: #fff; padding: 20px; text-align: center; }
+  header p { margin: 4px 0 0; }
+  main { max-width: 820px; margin: 24px auto; padding: 0 16px; }
+  h2 { color: #1f3a5f; border-bottom: 2px solid #cfd8e3; padding-bottom: 6px; margin-top: 32px; }
+  table { border-collapse: collapse; width: 100%; margin: 12px 0; background: #fff; }
+  th, td { border: 1px solid #cfd8e3; padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: #e4edf8; }
+  pre { background: #1e1e2e; color: #f0f0f0; padding: 12px; border-radius: 8px; overflow-x: auto; }
+  .table-wrap { overflow-x: auto; }
+  a.back { display: inline-block; margin-top: 24px; color: #1f3a5f; font-weight: bold; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Câu hỏi 8 - JavaScript</h1>
+  <p>Họ tên: <strong>NGUYỄN THANH TUẤN</strong> - Mã SV: <strong>231A010959</strong></p>
+</header>
+<main>
+
+<h2>Câu 1. JavaScript là gì? Nó được dùng để làm gì trong thiết kế web?</h2>
+<p>JavaScript là một ngôn ngữ lập trình bậc cao, thông dịch (interpreted), chạy chủ yếu trên trình duyệt web và hiện nay cũng chạy được ở phía máy chủ thông qua Node.js. Cùng với HTML (cấu trúc nội dung) và CSS (giao diện, định dạng), JavaScript là một trong ba công nghệ nền tảng của web, đảm nhiệm phần hành vi và tương tác.</p>
+<p><strong>Vai trò của JavaScript trong thiết kế web:</strong></p>
+<ul>
+  <li>Tạo tương tác cho trang web: xử lý sự kiện click, nhập liệu, cuộn trang, di chuột…</li>
+  <li>Thay đổi nội dung và giao diện động: thêm, sửa, xóa phần tử HTML/CSS thông qua DOM mà không cần tải lại trang.</li>
+  <li>Kiểm tra dữ liệu biểu mẫu (form validation) ngay trên trình duyệt trước khi gửi lên máy chủ.</li>
+  <li>Giao tiếp với máy chủ không đồng bộ (AJAX, Fetch API) để lấy hoặc gửi dữ liệu.</li>
+  <li>Tạo hiệu ứng, hoạt ảnh, slider, menu, popup, biểu đồ…</li>
+  <li>Xây dựng ứng dụng web hoàn chỉnh với các framework/thư viện như React, Vue, Angular; phát triển backend với Node.js.</li>
+</ul>
+
+<h2>Câu 2. Các kiểu dữ liệu chính trong JavaScript</h2>
+<p>JavaScript có hai nhóm kiểu dữ liệu: kiểu nguyên thủy (primitive) và kiểu tham chiếu (object).</p>
+<p><strong>a) Kiểu nguyên thủy (7 kiểu):</strong></p>
+<div class="table-wrap">
+<table>
+  <tr><th>Kiểu</th><th>Mô tả / Ví dụ</th></tr>
+  <tr><td>Number</td><td>Số nguyên và số thực. Ví dụ: 10, 3.14, NaN, Infinity</td></tr>
+  <tr><td>String</td><td>Chuỗi ký tự. Ví dụ: "Xin chào", 'JS'</td></tr>
+  <tr><td>Boolean</td><td>Giá trị logic: true hoặc false</td></tr>
+  <tr><td>Undefined</td><td>Biến đã khai báo nhưng chưa được gán giá trị</td></tr>
+  <tr><td>Null</td><td>Giá trị rỗng, được gán chủ động ("không có giá trị")</td></tr>
+  <tr><td>Symbol</td><td>Giá trị duy nhất, bất biến, thường dùng làm khóa thuộc tính</td></tr>
+  <tr><td>BigInt</td><td>Số nguyên lớn tùy ý. Ví dụ: 123456789012345678901234567890n</td></tr>
+</table>
+</div>
+<p><strong>b) Kiểu tham chiếu:</strong></p>
+<ul>
+  <li>Object – tập hợp các cặp khóa – giá trị, bao gồm cả Array (mảng), Function (hàm), Date, Map, Set…</li>
+</ul>
+<p><em>Lưu ý: toán tử <code>typeof null</code> trả về "object" – đây là một lỗi lịch sử của JavaScript.</em></p>
+
+<h2>Câu 3. Sự khác biệt giữa var, let và const</h2>
+<div class="table-wrap">
+<table>
+  <tr><th>Tiêu chí</th><th>var</th><th>let</th><th>const</th></tr>
+  <tr><td>Phạm vi (scope)</td><td>Function scope</td><td>Block scope</td><td>Block scope</td></tr>
+  <tr><td>Khai báo lại cùng tên trong cùng phạm vi</td><td>Được</td><td>Không</td><td>Không</td></tr>
+  <tr><td>Gán lại giá trị</td><td>Được</td><td>Được</td><td>Không</td></tr>
+  <tr><td>Hoisting</td><td>Được nâng lên, khởi tạo là undefined</td><td>Được nâng lên nhưng nằm trong “temporal dead zone” (báo lỗi nếu dùng trước khai báo)</td><td>Giống let</td></tr>
+  <tr><td>Bắt buộc gán giá trị khi khai báo</td><td>Không</td><td>Không</td><td>Có</td></tr>
+</table>
+</div>
+<p><strong>Ví dụ:</strong></p>
+<pre>var a = 1; var a = 2; // hợp lệ
+let b = 1; b = 2; // hợp lệ
+const c = 1; c = 2; // TypeError: Assignment to constant variable
+const arr = [1]; arr.push(2); // hợp lệ: const không cho gán lại biến, nhưng nội dung object/mảng vẫn thay đổi được</pre>
+<p><strong>Khuyến nghị:</strong> ưu tiên dùng const; chỉ dùng let khi cần gán lại giá trị; hạn chế dùng var.</p>
+
+<h2>Câu 4. JavaScript có phải là ngôn ngữ đơn luồng không?</h2>
+<p>Có. JavaScript là ngôn ngữ đơn luồng (single-threaded): engine chỉ có một luồng thực thi chính và một call stack, nên tại một thời điểm chỉ thực hiện được một đoạn mã.</p>
+<p>Tuy vậy, JavaScript vẫn xử lý được các tác vụ bất đồng bộ (setTimeout, Fetch, sự kiện…) nhờ cơ chế Event Loop kết hợp với Web APIs (hoặc libuv trong Node.js), Callback Queue và Microtask Queue (Promise). Các tác vụ tốn thời gian được giao cho môi trường (trình duyệt/Node.js) xử lý, khi xong thì callback được đưa vào hàng đợi và Event Loop đẩy vào call stack khi stack trống. Ngoài ra, có thể chạy mã song song bằng Web Workers (trong trình duyệt) hoặc Worker Threads (trong Node.js).</p>
+
+<h2>Câu 5. Toán tử delete trong JavaScript có tác dụng gì?</h2>
+<p><code>delete</code> là toán tử (operator), không phải hàm, dùng để xóa một thuộc tính khỏi đối tượng (object). Cú pháp: <code>delete object.property</code> hoặc <code>delete object["property"]</code>.</p>
+<p><strong>Ví dụ:</strong></p>
+<pre>const user = { name: "An", age: 20 };
+delete user.age;
+console.log(user); // { name: "An" }</pre>
+<p><strong>Đặc điểm cần nhớ:</strong></p>
+<ul>
+  <li>Trả về true nếu xóa thành công (hoặc thuộc tính không tồn tại); trả về false nếu thuộc tính không thể cấu hình (non-configurable) – ở strict mode sẽ ném lỗi TypeError.</li>
+  <li>Chỉ xóa được thuộc tính của object; không xóa được biến khai báo bằng var, let, const hay hàm.</li>
+  <li>Khi dùng với phần tử mảng, delete chỉ xóa giá trị và để lại “ô trống” (empty), không làm thay đổi length; nên dùng splice() để xóa hẳn phần tử.</li>
+  <li>Không xóa được thuộc tính của prototype thông qua đối tượng con; chỉ xóa được thuộc tính sở hữu (own property).</li>
+</ul>
+
+<a class="back" href="index.html">← Về trang chủ</a>
+</main>
+</body>
+</html>
